@@ -2,8 +2,6 @@
 
 A fully functional Python Quiz application built with Next.js (App Router), TypeScript, Tailwind CSS, Three.js, and Framer Motion.
 
-## Features
-
 - **Interactive 3D Buttons**: Three.js animated buttons with hover and click effects
 - **Sound System**: Web Audio API for correct/wrong answer feedback
 - **Level-Based Quizzes**: Easy, Middle, and Next Level difficulty
