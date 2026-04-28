@@ -1,0 +1,23 @@
+# Getting Started
+Python is a high-level, interpreted programming language known for its simplicity and readability.
+
+# Installation
+Install Python from python.org or use a package manager like brew, apt, or conda.
+
+# Python Basics
+Learn about variables, data types, operators, and basic syntax in Python.
+
+# Control Flow
+Master if statements, for loops, while loops, and conditional logic.
+
+# Functions
+Create reusable code blocks with functions using the def keyword.
+
+# Modules & Packages
+Organize code using modules and packages. Import using import statement.
+
+# File I/O
+Read from and write to files using open(), read(), write() methods.
+
+# Best Practices
+Follow PEP 8 style guide, write clean code, use virtual environments.

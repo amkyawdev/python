@@ -1,0 +1,21 @@
+# Middle Level Quiz Answers
+
+Q1: What is the correct syntax for a for loop in Python?
+Answer: for i in range(5):
+Explanation: In Python, use 'for i in range(5):' to iterate 5 times (0 to 4).
+
+Q2: How do you define a function in Python?
+Answer: def myFunc():
+Explanation: The 'def' keyword is used to define functions in Python.
+
+Q3: What is the output of: [x for x in range(3)]?
+Answer: [0, 1, 2]
+Explanation: range(3) generates [0, 1, 2] - starting from 0 by default.
+
+Q4: Which method adds an element to the end of a list?
+Answer: list.append()
+Explanation: append() adds an element to the end of a list.
+
+Q5: What does the 'break' statement do in a loop?
+Answer: Exits the nearest loop
+Explanation: The break statement immediately exits the nearest loop.

@@ -1,0 +1,21 @@
+# Next Level Quiz Answers
+
+Q1: What is a decorator in Python?
+Answer: A function that extends the behavior of another function
+Explanation: Decorators are functions that modify the behavior of other functions using @ symbol.
+
+Q2: What is the purpose of __init__ in a Python class?
+Answer: To initialize the object attributes
+Explanation: __init__ is a constructor method called when an object is created.
+
+Q3: How do you handle exceptions in Python?
+Answer: try-except
+Explanation: Python uses try-except blocks for exception handling.
+
+Q4: What is method overriding?
+Answer: Replacing a parent class method in a child class
+Explanation: Method overriding allows a child class to provide a specific implementation of a method defined in its parent.
+
+Q5: What does @property decorator do?
+Answer: Creates a getter method
+Explanation: @property decorator allows you to define methods that behave like attributes.

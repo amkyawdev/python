@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --baby-blue: #B8D4E3;
+  --baby-blue-light: #D6E9F2;
+  --baby-blue-dark: #8BB8CC;
+  --gray-soft: #6B7280;
+  --gray-light: #F3F4F6;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, var(--baby-blue-light) 0%, var(--gray-light) 100%);
+  min-height: 100vh;
+}
+
+/* Smooth touch feedback */
+* {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Button press effect */
+.btn-press {
+  transition: transform 0.1s ease;
+}
+
+.btn-press:active {
+  transform: scale(0.95);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--baby-blue-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--baby-blue-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--baby-blue);
+}

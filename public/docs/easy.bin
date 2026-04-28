@@ -1,0 +1,21 @@
+# Easy Level Quiz Answers
+
+Q1: What is the correct way to create a variable in Python?
+Answer: x = 5
+Explanation: In Python, you don't need to declare the variable type. Simply use x = 5 to assign a value.
+
+Q2: Which function is used to print output in Python?
+Answer: print()
+Explanation: The print() function is used to output content in Python.
+
+Q3: What is the result of 2 + 3 * 4 in Python?
+Answer: 14
+Explanation: Multiplication has higher precedence, so 3 * 4 = 12, then 2 + 12 = 14.
+
+Q4: How do you write a comment in Python?
+Answer: # comment
+Explanation: Hash (#) is used for single-line comments in Python.
+
+Q5: Which data type is used to store text in Python?
+Answer: str
+Explanation: In Python, text is stored using the 'str' (string) data type.
