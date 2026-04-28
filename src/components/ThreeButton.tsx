@@ -11,6 +11,7 @@ interface ThreeButtonProps {
   color?: string;
   hoverColor?: string;
   size?: 'small' | 'medium' | 'large';
+  icon?: string;  // Bootstrap icon class
 }
 
 function Cube({ color, hoverColor, onClick, isHovered, isClicked }: { 
@@ -83,7 +84,8 @@ export default function ThreeButton({
   onClick, 
   color = '#B8D4E3',
   hoverColor = '#8BB8CC',
-  size = 'medium'
+  size = 'medium',
+  icon
 }: ThreeButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -129,9 +131,15 @@ export default function ThreeButton({
           />
         </Canvas>
       </div>
-      <span className={`${sizes[size].font} font-semibold text-gray-700 mt-2`}>
-        {text}
-      </span>
+      {/* Bootstrap Icon + Text */}
+      <div className="text-center mt-2">
+        {icon && (
+          <i className={`bi ${icon} me-1`} style={{ color: color }}></i>
+        )}
+        <span className={`${sizes[size].font} font-semibold text-gray-700`}>
+          {text}
+        </span>
+      </div>
     </motion.div>
   );
 }

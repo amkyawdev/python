@@ -284,7 +284,7 @@ const levels = [
   { id: 'level-66', title: 'Level 66', description: 'regular expression', color: '#6894A3', hoverColor: '#487493', route: '/quiz/next-level', icon: 'bi-search' },
   { id: 'level-67', title: 'Level 67', description: 'regex patterns', color: '#588493', hoverColor: '#386473', route: '/quiz/next-level', icon: 'bi-regex' },
   { id: 'level-68', title: 'Level 68', description: 're.search', color: '#487483', hoverColor: '#285473', route: '/quiz/next-level', icon: 'bi-binoculars' },
-  { id: 'level-69', title: 'Level 69', description: 're.match', color: '#386473', hoverColor: '#184463', route: '/quiz/next-level', icon: 'bi-bullsege' },
+  { id: 'level-69', title: 'Level 69', description: 're.match', color: '#386473', hoverColor: '#184463', route: '/quiz/next-level', icon: 'bi-bullseye' },
   { id: 'level-70', title: 'Level 70', description: 're.findall', color: '#285463', hoverColor: '#083463', route: '/quiz/next-level', icon: 'bi-zoom-in' },
   { id: 'level-71', title: 'Level 71', description: 'Web scraping', color: '#184453', hoverColor: '#002453', route: '/quiz/next-level', icon: 'bi-globe' },
   { id: 'level-72', title: 'Level 72', description: 'requests', color: '#083443', hoverColor: '#001443', route: '/quiz/next-level', icon: 'bi-send' },
@@ -351,9 +351,9 @@ export default function LevelPage() {
               color={level.color}
               hoverColor={level.hoverColor}
               size="large"
+              icon={level.icon}
             />
-            <p className="text-gray-600 mt-4 text-center text-sm">
-              <i className={`bi ${level.icon} me-1`}></i>
+            <p className="text-gray-600 mt-2 text-center text-sm">
               {level.description}
             </p>
           </motion.div>
