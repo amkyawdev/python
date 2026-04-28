@@ -24,14 +24,14 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#B8D4E3" />
         
-        {/* Bootstrap CSS - Local fallback to CDN */}
+        {/* Bootstrap CSS - unpkg CDN */}
         <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
         />
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          href="https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
         />
         {/* Favicon */}
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
