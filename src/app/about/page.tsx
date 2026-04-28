@@ -82,8 +82,20 @@ export default function AboutPage() {
           <div className="col-lg-6 mb-4">
             <div className="card shadow-lg h-100">
               <div className="card-body text-center">
-                <div className="mb-3">
-                  <i className="bi bi-person-circle text-primary" style={{ fontSize: '4rem' }}></i>
+                {/* Bootstrap Avatar Circle */}
+                <div 
+                  className="d-inline-block rounded-circle p-4 mb-3" 
+                  style={{ 
+                    backgroundColor: user.avatar || '#B8D4E3',
+                    width: '120px',
+                    height: '120px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto'
+                  }}
+                >
+                  <i className="bi bi-person-fill text-white" style={{ fontSize: '3rem' }}></i>
                 </div>
                 <h2 className="card-title fw-bold">{user.name}</h2>
                 <p className="text-muted small">{user.id}</p>

@@ -3,29 +3,35 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { createUser, getCurrentUser, type User } from '@/data/user';
+import { createUser, getCurrentUser, type User, generateAvatar } from '@/data/user';
 
 export default function UserPage() {
   const router = useRouter();
   const [name, setName] = useState('');
   const [existingUser, setExistingUser] = useState<User | null>(null);
   const [isNewUser, setIsNewUser] = useState(true);
+  const [avatarPreview, setAvatarPreview] = useState('#B8D4E3');
 
   useEffect(() => {
     const user = getCurrentUser();
     if (user) {
       setExistingUser(user);
       setName(user.name);
+      setAvatarPreview(user.avatar || '#B8D4E3');
       setIsNewUser(false);
     }
   }, []);
+
+  const handleAvatarRefresh = () => {
+    setAvatarPreview(generateAvatar());
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return;
 
     if (isNewUser) {
-      const newUser = createUser(name);
+      const newUser = createUser(name, avatarPreview);
       setExistingUser(newUser);
     }
     
@@ -50,7 +56,20 @@ export default function UserPage() {
             transition={{ type: 'spring', delay: 0.2 }}
             className="text-center mb-6"
           >
-            <i className="bi bi-person-circle text-6xl text-baby-blue"></i>
+            {/* Bootstrap Avatar Circle */}
+            <div 
+              className="d-inline-block rounded-circle p-4" 
+              style={{ 
+                backgroundColor: existingUser?.avatar || avatarPreview,
+                width: '120px',
+                height: '120px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <i className="bi bi-person-fill text-white" style={{ fontSize: '4rem' }}></i>
+            </div>
             <h1 className="text-2xl font-bold text-gray-800 mt-4">
               {isNewUser ? 'Create Profile' : 'Welcome Back'}
             </h1>
@@ -82,6 +101,17 @@ export default function UserPage() {
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit}>
+              {/* Avatar Preview Button */}
+              <div className="text-center mb-4">
+                <button
+                  type="button"
+                  onClick={handleAvatarRefresh}
+                  className="btn btn-outline-secondary btn-sm"
+                >
+                  <i className="bi bi-arrow-repeat me-2"></i>
+                  Change Avatar Color
+                </button>
+              </div>
               <div className="mb-4">
                 <label className="form-label">Enter Your Name</label>
                 <input

@@ -3,6 +3,7 @@
 export interface User {
   id: string;
   name: string;
+  avatar: string;
   createdAt: string;
 }
 
@@ -12,6 +13,37 @@ export interface QuizScore {
   score: number;
   total: number;
   date: string;
+}
+
+// Bootstrap Icons avatars (using bi-person-circle with different colors)
+const AVATAR_COLORS = [
+  '#B8D4E3', // Baby Blue
+  '#94A3B8', // Gray
+  '#8BB8CC', // Baby Blue Dark
+  '#6B7280', // Gray Dark
+  '#5C7C96', // Navy
+  '#7A96A8', // Teal
+  '#96A87A', // Green
+  '#A8967A', // Orange
+  '#7A7AA8', // Purple
+  '#A87A96', // Pink
+];
+
+const AVATAR_ICONS = [
+  'bi-person-circle',
+  'bi-person-circle-fill',
+  'bi-person-circle',
+  'bi-person-circle-fill',
+];
+
+export function generateAvatar(): string {
+  const colorIndex = Math.floor(Math.random() * AVATAR_COLORS.length);
+  return AVATAR_COLORS[colorIndex];
+}
+
+export function getAvatarUrl(avatarColor: string): string {
+  // Return bootstrap icons class with color styling
+  return avatarColor;
 }
 
 const STORAGE_KEY = 'python_quiz_users';
@@ -33,11 +65,13 @@ export function getUserById(id: string): User | undefined {
   return users.find(u => u.id === id);
 }
 
-export function createUser(name: string): User {
+export function createUser(name: string, avatar?: string): User {
   const users = getAllUsers();
+  const userAvatar = avatar || generateAvatar();
   const newUser: User = {
     id: generateUserId(),
     name: name.trim(),
+    avatar: userAvatar,
     createdAt: new Date().toISOString(),
   };
   users.push(newUser);
